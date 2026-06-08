@@ -707,7 +707,7 @@
 			repositoryURL = "https://github.com/TelemetryDeck/SwiftSDK";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.12.0;
+				minimumVersion = 2.14.1;
 			};
 		};
 		4015F1D02FAFA73800DCCA7E /* XCRemoteSwiftPackageReference "polleninformationen-swift" */ = {
