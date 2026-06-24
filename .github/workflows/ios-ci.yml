@@ -152,7 +152,7 @@ jobs:
           echo "xcode-cache-version=$cache_version" >> "$GITHUB_OUTPUT"
 
       - name: SwiftPM-Cache wiederherstellen
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: .xcode-derived-data/SourcePackages
           key: swiftpm-${{ runner.os }}-xcode-${{ steps.xcode-version.outputs.xcode-cache-version }}-${{ hashFiles('Cujana.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
@@ -160,7 +160,7 @@ jobs:
             swiftpm-${{ runner.os }}-xcode-${{ steps.xcode-version.outputs.xcode-cache-version }}-
 
       - name: Xcode-Build-Cache wiederherstellen
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: |
             .xcode-derived-data/Build
@@ -202,7 +202,7 @@ jobs:
           xcode-select -p
 
       - name: SwiftPM-Cache wiederherstellen
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: |
             ${{ env.SWIFTPM_CACHE_PATH }}
@@ -268,7 +268,7 @@ jobs:
           xcode-select -p
 
       - name: SwiftPM-Cache wiederherstellen
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: |
             ${{ env.SWIFTPM_CACHE_PATH }}
